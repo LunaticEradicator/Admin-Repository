@@ -1,2 +1,3 @@
 # Admin-Repository
-Repositroy created using grid
+Repository created using grid
+Added Dynamic SideBar using .js and css
