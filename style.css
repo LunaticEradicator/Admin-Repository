@@ -1,0 +1,417 @@
+:root {
+    --container-color: #1c1917;
+    --background-color: white;
+    --border-color: 5px solid rgb(214, 168, 69);
+    --container-font-color: aliceblue;
+    --font-color: #1c1917;
+    --sidebar-color: #57534e;
+    --searchBar-color: #ffffff;
+    --transition-time: 0.7s;
+}
+
+.darkThemeRootChange {
+    --container-color: white;
+    --background-color: #1c1917;
+    --border-color: 5px solid rgb(214, 168, 69);
+    --container-font-color: #1c1917;
+    --font-color: aliceblue;
+    --sidebar-color: #b3b0ac;
+    --searchBar-color: #1c1917;
+}
+
+body {
+    font-family: system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--background-color);
+    transition: var(--transition-time);
+}
+
+.searchBarSectionTwo>span,
+.userGreetingText>span,
+h1,
+h2 {
+    color: var(--font-color);
+}
+
+img {
+    width: 25px;
+}
+
+button {
+    /* all: unset; */
+    /* outline: none; */
+    border: 1px solid rgb(236, 227, 144);
+    background-color: var(--container-color);
+    color: var(--container-font-color);
+    border-radius: 50px;
+    width: 8rem;
+    height: 40px;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+span {
+    font-weight: bold;
+}
+
+h3,
+p {
+    margin: 0;
+}
+
+/* SearchBar Section */
+.userLogo {
+    border: 1px solid var(--container-color);
+    border-radius: 50%;
+    background-color: rgb(236, 227, 144);
+    width: 50px;
+}
+
+#search {
+    display: grid;
+    width: 53vh;
+    height: 3.5vh;
+    outline: none;
+    background-color: var(--searchBar-color);
+    color: var(--font-color);
+    border: 1px solid #d3cfcd;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding-left: 12px;
+}
+
+/* UserGreetingBar Section*/
+
+.userGreetingBar {
+    box-shadow: 10px 12px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+/* SideBar  Section*/
+.sidebar {
+    background-color: var(--sidebar-color);
+    color: var(--container-font-color);
+    min-height: 100vh;
+}
+
+.sidebarSectionOne>img {
+    width: 40px;
+    transition: var(--transition-time);
+}
+
+.sidebarSectionOne>span {
+    font-size: 2rem;
+}
+
+/* Article Section */
+
+.eachArticle {
+    background-color: var(--container-color);
+    color: var(--container-font-color);
+    border-right: var(--border-color);
+    border-radius: 10px;
+
+    height: 276px;
+    padding: 20px;
+    padding-bottom: 0px;
+    font-size: 1.5rem;
+}
+
+.eachAnnouncement {
+    background-color: var(--container-color);
+    color: var(--container-font-color);
+    border-right: var(--border-color);
+    border-radius: 10px;
+    height: 250px;
+    width: 70%;
+    font-size: 0.8rem;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+/* Trending Section  */
+h4 {
+    margin: 0;
+    font-weight: bold;
+}
+
+.eachTrending {
+    /* background-color: #0f172a; */
+    background-color: var(--container-color);
+    color: var(--container-font-color);
+    border-right: var(--border-color);
+    border-radius: 10px;
+    height: 250px;
+    width: 70%;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+.eachTrending>img {
+    width: 4vh;
+}
+
+.eachTrending>.eachTrendingText {
+    font-size: 0.8rem;
+}
+
+
+/* Grid Layout */
+
+.container {
+    display: grid;
+    grid-template-columns: auto 4fr 1fr;
+}
+
+/* searchBar */
+.searchBar {
+    grid-column: 2/4;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 2.5fr 1fr;
+}
+
+.searchBarSectionOne {
+    display: grid;
+    grid-auto-flow: column;
+    padding-left: 70px;
+    align-items: center;
+    justify-self: start;
+    width: 30rem;
+    gap: 5%;
+}
+
+.searchBarSectionTwo {
+    display: grid;
+    grid-auto-flow: column;
+    justify-self: center;
+    align-items: center;
+    gap: 2rem;
+    /* background-color: rebeccapurple; */
+}
+
+/* userGreetingBar */
+.userGreetingBar {
+    grid-column: 2/4;
+    display: grid;
+    align-items: center;
+    padding-left: 70px;
+    justify-items: start;
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.userGreetingBarSectionOne {
+    display: grid;
+    grid-auto-flow: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.userGreetingBarSectionTwo {
+    display: grid;
+    justify-self: center;
+}
+
+.userGreetingText {
+    /* background-color: rebeccapurple; */
+    display: grid;
+    justify-content: center;
+}
+
+h1 {
+    margin: 0px;
+    font-size: 1.5rem;
+}
+
+.userGreetingBarSectionOne>.userLogo {
+    width: 70px;
+}
+
+.userGreetingBarSectionTwo {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 50px;
+}
+
+/* sidebar */
+.sidebar {
+    padding-left: 20px;
+    padding-right: 14px;
+    grid-row: 1/4;
+    display: grid;
+    grid-template: auto;
+    align-content: start;
+    gap: 50px;
+    font-size: 1.4rem;
+}
+
+.sidebarHoverStyle {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    transition: var(--transition-time);
+}
+
+.sidebarSectionOne {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    transition: var(--transition-time);
+    padding-top: 10px;
+}
+
+
+.sidebarSectionTwo,
+.sidebarSectionThree {
+    display: grid;
+    gap: 15px;
+}
+
+
+/* article */
+.content {
+    grid-column: 2/span1;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 3fr 1fr;
+}
+
+.article {
+    padding-left: 20px;
+}
+
+.articleSectionOne {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+
+.eachArticle {
+    display: grid;
+}
+
+.eachArticle>.images {
+    display: grid;
+    grid-auto-flow: column;
+    justify-content: end;
+    gap: 20px;
+}
+
+/* lastSection */
+.eachAnnouncement {
+    display: grid;
+}
+
+
+.eachTrending {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+}
+
+/* Hover And Transition  */
+
+button:hover {
+    background-color: var(--background-color);
+    border: 1px solid var(--container-color);
+    color: var(--container-color);
+    font-size: 1.2rem;
+    transition: var(--transition-time);
+}
+
+/* SideBar Hover with Header zero Alpha */
+
+.sidebarSectionOne:hover>div {
+    background-color: rgba(245, 245, 220, 0);
+}
+
+
+.sidebarHoverStyle:hover {
+    cursor: pointer;
+    border-radius: 10px;
+    padding-left: 5px;
+    transform: scale(1.1);
+    color: var(--background-color);
+    background-color: var(--container-color);
+    transition: var(--transition-time);
+}
+
+.sidebarHoverStyle:hover img {
+    background: searchBar("./icon/home.png");
+}
+
+.sidebarSectionOne:hover {
+    cursor: pointer;
+    color: var(--background-color);
+    transition: var(--transition-time);
+    border-radius: 10px;
+}
+
+.sidebarSectionOne:hover>img {
+    transform: rotate(-45deg);
+    transition: var(--transition-time);
+}
+
+/* Light and Dark Theme  */
+.darkThemeBtn,
+.lightThemeBtn {
+    width: 2.5rem;
+}
+
+.darkThemeBtn {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    display: none;
+}
+
+.lightThemeBtn {
+    background-color: #000000;
+    border-radius: 10px;
+}
+
+.lightThemeBtn:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: black;
+    transition: var(--transition-time);
+    border-radius: 15px;
+}
+
+.darkThemeBtn:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+    color: black;
+    transition: var(--transition-time);
+    border-radius: 15px;
+}
+
+.logoDark {
+    display: none;
+}
+
+
+/* Dynamic Sidebar Transition using .js */
+.sidebar {
+    width: 250px;
+    transition: var(--transition-time);
+}
+
+.sidebarTransition {
+    width: 35px;
+    transition: var(--transition-time);
+    padding: 10px;
+}
+
+.sidebarSpanTransition {
+    display: none;
+}
+
+.hoverStyleMargin {
+    margin-top: 30px;
+    transition: var(--transition-time);
+}
