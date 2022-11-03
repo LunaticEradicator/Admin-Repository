@@ -19,21 +19,21 @@ function sidebarToggle() {
         if (clicked === false) {
             clicked = true;
             sidebar.classList.add("sidebarTransition");
-            sidebarSpan.forEach(span => {
-                span.classList.add("sidebarSpanTransition");
+            sidebarSpan.forEach(e => {
+                e.classList.add("sidebarSpanTransition");
             });
-            sidebarHoverStyle.forEach(span => {
-                span.classList.add("hoverStyleMargin");
+            sidebarHoverStyle.forEach(e => {
+                e.classList.add("sidebarHoverStyleMargin");
             });
         }
         else if (clicked === true) {
             clicked = false;
             sidebar.classList.remove("sidebarTransition");
-            sidebarSpan.forEach(span => {
-                span.classList.remove("sidebarSpanTransition");
+            sidebarSpan.forEach(e => {
+                e.classList.remove("sidebarSpanTransition");
             });
-            sidebarHoverStyle.forEach(span => {
-                span.classList.remove("hoverStyleMargin");
+            sidebarHoverStyle.forEach(e => {
+                e.classList.remove("sidebarHoverStyleMargin");
             });
         }
     });
@@ -44,6 +44,7 @@ function LightAndDarkThemeBtn() {
         element.classList.add("darkThemeRootChange");
         darkThemeBtn.style.display = "block";
         lightThemeBtn.style.display = "none";
+
         logoDark.forEach(e => {
             e.style.display = "block";
         })
@@ -56,6 +57,7 @@ function LightAndDarkThemeBtn() {
         element.classList.remove("darkThemeRootChange");
         darkThemeBtn.style.display = "none";
         lightThemeBtn.style.display = "block";
+
         logoDark.forEach(e => {
             e.style.display = "none";
         })

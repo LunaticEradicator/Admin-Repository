@@ -49,6 +49,7 @@ button {
     height: 40px;
     font-size: 0.9rem;
     cursor: pointer;
+    transition: var(--transition-time);
 }
 
 span {
@@ -68,18 +69,7 @@ p {
     width: 50px;
 }
 
-#search {
-    display: grid;
-    width: 53vh;
-    height: 3.5vh;
-    outline: none;
-    background-color: var(--searchBar-color);
-    color: var(--font-color);
-    border: 1px solid #d3cfcd;
-    border-radius: 50px;
-    font-size: 1.2rem;
-    padding-left: 12px;
-}
+
 
 /* UserGreetingBar Section*/
 
@@ -167,20 +157,33 @@ h4 {
 /* searchBar */
 .searchBar {
     grid-column: 2/4;
-    display: grid;
+    display: flex;
     align-items: center;
     justify-items: center;
     grid-template-columns: 2.5fr 1fr;
+    gap: 50px;
 }
 
 .searchBarSectionOne {
-    display: grid;
+    display: flex;
+    flex: 1;
     grid-auto-flow: column;
-    padding-left: 70px;
+    padding-left: 80px;
     align-items: center;
     justify-self: start;
-    width: 30rem;
-    gap: 5%;
+    gap: 2%;
+}
+
+#search {
+    outline: none;
+    background-color: var(--searchBar-color);
+    color: var(--font-color);
+    border: 1px solid #d3cfcd;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    padding-left: 12px;
+    flex-grow: 1;
+    height: 3.5vh;
 }
 
 .searchBarSectionTwo {
@@ -189,6 +192,7 @@ h4 {
     justify-self: center;
     align-items: center;
     gap: 2rem;
+    padding-right: 80px;
     /* background-color: rebeccapurple; */
 }
 
@@ -361,6 +365,7 @@ button:hover {
 .darkThemeBtn,
 .lightThemeBtn {
     width: 2.5rem;
+    transition: var(--transition-time);
 }
 
 .darkThemeBtn {
@@ -411,7 +416,7 @@ button:hover {
     display: none;
 }
 
-.hoverStyleMargin {
+.sidebarHoverStyleMargin {
     margin-top: 30px;
     transition: var(--transition-time);
 }
